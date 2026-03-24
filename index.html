@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="fr" class="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pierre Pouget - CV</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        'bg-main': 'var(--bg-main)',
+                        'bg-panel': 'var(--bg-panel)',
+                        'bg-panel-2': 'var(--bg-panel-2)',
+                        'border-clr': 'var(--border)',
+                        'text-pri': 'var(--text-primary)',
+                        'text-sec': 'var(--text-secondary)',
+                        'accent-clr': 'var(--accent)',
+                        'accent-h': 'var(--accent-hover)',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        :root {
+            --bg-main: #0f1115;
+            --bg-panel: #171b22;
+            --bg-panel-2: #1b2029;
+            --border: #2b3340;
+            --text-primary: #edf1f7;
+            --text-secondary: #b2bccb;
+            --accent: #ff6d5a;
+            --accent-hover: #ff866f;
+        }
+
+        .light {
+            --bg-main: #f9fafb;
+            --bg-panel: #ffffff;
+            --bg-panel-2: #f3f4f6;
+            --border: #e5e7eb;
+            --text-primary: #111827;
+            --text-secondary: #6b7280;
+        }
+
+        body {
+            background-color: var(--bg-main);
+            color: var(--text-primary);
+            font-family: 'Inter', sans-serif;
+        }
+
+        .panel {
+            background-color: var(--bg-panel);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 24px;
+        }
+
+        .theme-btn {
+            background: var(--bg-panel);
+            border: 1px solid var(--border);
+            color: var(--text-primary);
+            padding: 6px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 11px;
+            font-weight: 700;
+            transition: 0.2s;
+        }
+
+        .theme-btn:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+    </style>
+</head>
+
+<body class="p-4 md:p-8 antialiased">
+
+    <div class="fixed top-4 right-4 z-50">
+        <button id="theme-toggle" class="theme-btn uppercase tracking-wider">Mode Clair</button>
+    </div>
+
+    <div class="max-w-[1120px] mx-auto flex flex-col gap-7">
+
+        <header class="panel flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+            <div>
+                <h1 class="text-4xl font-extrabold tracking-tight">Pierre Pouget</h1>
+                <h2 class="text-xl font-bold text-accent-clr uppercase tracking-tight">DEVELOPPEUR WEB FULL-STACK (EN
+                    FORMATION)</h2>
+            </div>
+            <div class="text-left md:text-right text-sm text-text-sec font-medium">
+                <p>Pau - 64000</p>
+                <p><a href="mailto:pierre.pouget01@gmail.com"
+                        class="text-accent-clr hover:underline">9xe4zb9fw@mozmail.com</a></p>
+                <p>Permis B</p>
+            </div>
+        </header>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-7 items-stretch">
+            <section class="panel md:col-span-1">
+                <h3
+                    class="text-xs font-bold text-text-sec uppercase tracking-widest mb-4 border-b border-border-clr pb-2">
+                    PROFIL</h3>
+                <p class="text-sm leading-relaxed">Proactif et doté d'un esprit "maker" autodidacte, j'allie
+                    adaptabilité, sens des responsabilités et pragmatisme pour m'investir pleinement dans les défis
+                    techniques.</p>
+            </section>
+
+            <section class="panel md:col-span-2 border-accent-clr relative overflow-hidden pl-10">
+                <div class="absolute top-0 left-0 w-1.5 h-full bg-accent-clr"></div>
+                <h3
+                    class="text-xs font-bold text-text-sec uppercase tracking-widest mb-4 border-b border-border-clr pb-2">
+                    Demande de stage</h3>
+                <p class="text-accent-clr text-sm font-bold mb-3">(non rémunéré - 2 semaines et 4 semaines - fin avril
+                    et fin juillet)</p>
+                <div class="text-sm leading-relaxed space-y-3">
+                    <p>Ancien militaire et technicien aéronautique, je me réoriente vers le développement web avec une
+                        exigence de fiabilité et de performance.</p>
+                    <p>En formation à la Fabrique Numérique Paloise, je monte actuellement en compétence sur la stack
+                        MERN (MongoDB, Express, React, Node.js) et la création d'interfaces dynamiques. Je me plais
+                        également à développer des outils pragmatiques et évolutifs intégrant l'IA via l'automatisation
+                        de workflows (n8n, Node-RED).</p>
+                    <p>Je recherche un stage au sein de l'écosystème palois pour mettre ma réactivité et mon esprit
+                        "maker" au service de vos défis techniques.</p>
+                </div>
+            </section>
+        </div>
+
+        <section class="panel">
+            <h3 class="text-xs font-bold text-text-sec uppercase tracking-widest mb-6 border-b border-border-clr pb-2">
+                COMPÉTENCES TECHNIQUE (En cours d'acquisition)
+            </h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+                <div class="p-5 bg-bg-panel-2 border border-border-clr rounded-lg flex flex-col">
+                    <h4 class="text-accent-clr font-bold mb-3 uppercase text-xs">Développement Full-Stack</h4>
+                    <ul class="text-sm space-y-1">
+                        <li><span class="text-text-sec">Front-end :</span> React.js, JavaScript (ES6+), HTML5/CSS3
+                            (Tailwind CSS, Responsive Design)</li>
+                        <li><span class="text-text-sec">Back-end :</span> Node.js, Express, API REST.
+                        </li>
+                        <li><span class="text-text-sec">Base de données
+                                :</span> PostgreSQL, MongoDB (NoSQL).
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="p-5 bg-bg-panel-2 border border-border-clr rounded-lg flex flex-col">
+                    <h4 class="text-accent-clr font-bold mb-3 uppercase text-xs">Développement Full-Stack</h4>
+                    <ul class="text-sm space-y-1">
+                        <li><span class="text-text-sec">No-code/Low-code :
+                            </span> Automatisation de workflows avec n8n et Node-RED.</li>
+                        <li><span class="text-text-sec">IA :
+                            </span> Intégration d'API, conception de prompts, extraction de données par IA.</li>
+
+                    </ul>
+                </div>
+
+                <div class="p-5 bg-bg-panel-2 border border-border-clr rounded-lg flex flex-col">
+                    <h4 class="text-accent-clr font-bold mb-3 uppercase text-xs">Développement Full-Stack</h4>
+                    <ul class="text-sm space-y-1">
+                        <li><span class="text-text-sec">DevOps/Sys :</span> Docker (Docker-compose), Git/GitHub,
+                            environnements Linux.</li>
+                        <li><span class="text-text-sec">Gestion de projet :
+                            </span> Méthode Agile, UX/UI, rigueur documentaire</li>
+
+                    </ul>
+                </div>
+        </section>
+
+        <section class="panel">
+            <h3 class="text-xs font-bold text-text-sec uppercase tracking-widest mb-6 border-b border-border-clr pb-2">
+                PROJETS PERSONNELS (Maker)</h3>
+            <div class="grid grid-cols-1 gap-5">
+                <div
+                    class="bg-bg-panel-2 p-5 border border-border-clr rounded-lg hover:border-accent-clr transition group">
+                    <div class="flex justify-between items-start mb-3">
+                        <h4 class="text-accent-clr font-bold">ReqTools - Plateforme d’Automatisation & IA</h4>
+                        <a href="https://github.com/p-pouget/ReqTools" target="_blank"
+                            class="text-[15px] font-mono opacity-30 group-hover:opacity-100 transition tracking-tighter uppercase">[GitHub]</a>
+                    </div>
+                    <ul class="text-sm space-y-1">
+                        <li>• <span class="font-semibold">Concept :</span> Développement d’une "boîte à outils" locale
+                            pour le test d'API et l'extraction
+                            de données structurées via LLM.</li>
+                        <li>• <span class="font-semibold">Technique :</span> Architecture conteneurisée avec Docker,
+                            moteur de logique Node-RED et
+                            frontend dynamique en Vanilla JS.
+                        </li>
+                        <li>• <span class="font-semibold">Impact :</span> Architecture conteneurisée avec Docker, moteur
+                            de logique Node-RED et
+                            frontend dynamique en Vanilla JS.
+                        </li>
+                    </ul>
+                </div>
+                <div
+                    class="bg-bg-panel-2 p-5 border border-border-clr rounded-lg hover:border-accent-clr transition group">
+                    <div class="flex justify-between items-start mb-3">
+                        <h4 class="text-accent-clr font-bold">ModernDashboard - Interface pour Libre HardwareMonitor
+                        </h4>
+                        <a href="https://github.com/p-pouget/LHM_ModernDashboard-v1.0" target="_blank"
+                            class="text-[15px] font-mono opacity-30 group-hover:opacity-100 transition tracking-tighter uppercase">[GitHub]</a>
+                    </div>
+                    <ul class="text-sm space-y-1">
+                        <li>• <span class="font-semibold">Concept :</span> Création d'une surcouche graphique moderne
+                            (UI/UX) pour le monitoring de capteurs matériels système.</li>
+                        <li>• <span class="font-semibold">Technique :</span> Intégration d'une interface WebView2
+                            (HTML/CSS/JS) sur un backend C#
+                            / .NET (LibreHardwareMonitorLib).
+                        </li>
+                        <li>• <span class="font-semibold text-xs text-text-sec italic">Projet en cours d'optimisation
+                                (correction de l'adressage des
+                                librairies pour la précision des données CPU).
+                            </span></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="panel">
+            <h3 class="text-xs font-bold text-text-sec uppercase tracking-widest mb-6 border-b border-border-clr pb-2">
+                EXPÉRIENCES TRANSVERSALITÉ</h3>
+            <div class="space-y-6">
+                <div class="relative pl-5 border-l border-border-clr">
+                    <div class="absolute -left-[4.5px] top-1.5 w-2 h-2 rounded-full bg-accent-clr"></div>
+                    <h4 class="text-sm font-bold">Chaudronnier Tôlier (Aéronautique) | EXAMECA & SAFRAN | 2021-2025</h4>
+                    <p class="text-xs text-text-sec mt-1"><span class="font-bold text-accent-clr">Transfert :</span>
+                        Exigence, précision, polyvalence, technicité.</p>
+                </div>
+                <div class="relative pl-5 border-l border-border-clr">
+                    <div class="absolute -left-[4.5px] top-1.5 w-2 h-2 rounded-full bg-accent-clr"></div>
+                    <h4 class="text-sm font-bold">Assistant contrôle qualité | 3C METAL | 2023 - 2024</h4>
+                    <p class="text-xs text-text-sec mt-1"><span class="font-bold text-accent-clr">Transfert :</span>
+                        Analyse, respect des normes, rédaction documentaire.</p>
+                </div>
+                <div class="relative pl-5 border-l border-border-clr">
+                    <div class="absolute -left-[4.5px] top-1.5 w-2 h-2 rounded-full bg-accent-clr"></div>
+                    <h4 class="text-sm font-bold">Auxiliaire Paramédical (Caporal-chef) | 4ème RÉGIMENT DE CHASSEURS |
+                        2016-2021</h4>
+                    <p class="text-xs text-text-sec mt-1"><span class="font-bold text-accent-clr">Transfert :</span>
+                        Leadership, gestion des priorités, travail en équipe et sous
+                        pression. > Opérations extérieures (Mali 2017 et 2019).
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-7">
+            <section class="panel">
+                <h3
+                    class="text-xs font-bold text-text-sec uppercase tracking-widest mb-4 border-b border-border-clr pb-2">
+                    FORMATION</h3>
+                <ul class="text-sm space-y-4">
+                    <li>
+                        <p class="font-bold">Développeur Web et Web Mobile</p>
+                        <p class="text-xs text-text-sec">La Fabrique Numérique Paloise | 2025 - En cours</p>
+                    </li>
+                    <li>
+                        <p class="font-bold">BAC PRO Chaudronnerie Industrielle</p>
+                        <p class="text-xs text-text-sec">UIMM Adour - Lanne | 2021-2023</p>
+                    </li>
+                    <li>
+                        <p class="font-bold">BAC Économique et Social</p>
+                        <p class="text-xs text-text-sec">Lycée Théophile Gautier - Tarbes | 2012</p>
+                    </li>
+                </ul>
+            </section>
+            <section class="panel">
+                <h3
+                    class="text-xs font-bold text-text-sec uppercase tracking-widest mb-4 border-b border-border-clr pb-2">
+                    CENTRES D'INTÉRÊT</h3>
+                <div class="grid grid-cols-2 gap-4 text-sm">
+                    <div class="p-5 bg-bg-panel-2 border border-border-clr rounded-lg flex flex-col">
+                        <h4 class="font-bold text-accent-clr text-[10px] uppercase mb-1">Montagne</h4>
+                        <p>Escalade, alpinisme.</p>
+                    </div>
+                    <div class="p-5 bg-bg-panel-2 border border-border-clr rounded-lg flex flex-col">
+                        <h4 class="font-bold text-accent-clr text-[10px] uppercase mb-1">Technologie</h4>
+                        <p>IA, Automatisation, Métallurgie.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <footer class="text-center py-10 opacity-40">
+            <p class="text-[9px] uppercase tracking-[0.2em]">Généré en HTML/Tailwind via IA selon ma charte graphique
+                standardisée.</p>
+            <div class="text-[9px] uppercase tracking-[0.2em]">
+                <span>En retard ! En retard !</span>
+                <span>🐇 ⏰</span>
+                <span class="text-[9px] uppercase tracking-[0.2em]">(D'où le recours à l'IA pour ce design ma chère
+                    Alice
+                    !)</span>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        const btn = document.getElementById('theme-toggle');
+        btn.addEventListener('click', () => {
+            document.documentElement.classList.toggle('light');
+            btn.innerText = document.documentElement.classList.contains('light') ? 'Mode Sombre' : 'Mode Clair';
+        });
+    </script>
+</body>
+
+</html>
